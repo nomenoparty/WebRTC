@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat Application</h1>
+        <div id="chatWindow">
+            Tin nhắn sẽ hiển thị tại đây
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Enter your message..." onkeypress="if(event.key === 'Enter') sendMessage()"/>
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i> Send
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Meeting with Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Video Meeting Application</h1>
+        
+        <div class="main-content">
+            <!-- Màn hình lớn để hiển thị video hoặc chia sẻ màn hình -->
+            <div id="mainScreen">
+                <video id="mainVideo" autoplay="autoplay" ></video>
+            </div>
+
+            <!-- Khung trò chuyện -->
+            <div id="chatSection">
+                <div id="chatWindow">
+                    <!-- Tin nhắn sẽ hiển thị tại đây -->
+                </div>
+                <div class="input-area">            		       		
+                	<input type="text" id="messageInput" placeholder="Enter your message..." onkeypress="if(event.key === 'Enter') sendMessage()"/>
+                	<button onclick="sendMessage()"><i class="fas fa-paper-plane"></i>Send</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Danh sách người tham gia cuộc họp -->
+        <!-- <div id="participantsList" class="hidden">
+            <h2>Participants</h2>
+            <ul id="participants"></ul>
+        </div> -->		      	
+        <div class="sidebar hidden" id="participantsList">
+    		<h3>Participants</h3>
+    		<ul id="participants">
+        	<!-- Danh sách các thành viên sẽ được thêm vào đây -->
+    		</ul>
+		</div>  
+        <!-- Các nút điều khiển -->
+        <div class="controls">
+            <button id="muteButton" onclick="toggleMute()">Voice</button>
+            <button id="videoButton" onclick="toggleVideo()">Camera</button>
+            <button id="shareScreenButton" onclick="startScreenShare()">Share Screen</button>
+            <button id="participantsButton" onclick="toggleParticipants()">Participants</button>
+        </div>
+        <div id="microphoneLevel">Micro Level: 0</div>
+		<div id="microphoneStatus">Micro is silent</div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+ 
